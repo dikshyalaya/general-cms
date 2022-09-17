@@ -37,18 +37,7 @@
                         @else
                             <i class="step__icon fa fa-database" aria-hidden="true"></i>
                         @endif
-                    </li>
-
-                    <li class="step__divider"></li>
-                    <li class="step__item {{ isActive('LaravelInstaller::license') }}">
-                        @if(Request::is('install/license') || Request::is('install/environment') || Request::is('install/environment/wizard') || Request::is('install/environment/classic') )
-                            <a href="{{ route('LaravelInstaller::license') }}">
-                                <i class="step__icon fa fa-key" aria-hidden="true"></i>
-                            </a>
-                        @else
-                            <i class="step__icon fa fa-key" aria-hidden="true"></i>
-                        @endif
-                    </li>
+                    </li> 
 
                     <li class="step__divider"></li>
                     <li class="step__item {{ isActive('LaravelInstaller::permissions') }}">
