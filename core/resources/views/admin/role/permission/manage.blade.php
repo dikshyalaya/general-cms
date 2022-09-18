@@ -74,6 +74,10 @@
                 			<input type="checkbox" name="permissions[]" value="Pages" class="selectgroup-input" @if(is_array($permissions) && in_array('Pages', $permissions)) checked @endif>
                 			<span class="selectgroup-button">Custom Pages</span>
                 		</label>
+						<label class="selectgroup-item">
+                			<input type="checkbox" name="permissions[]" value="Jobs Management" class="selectgroup-input" @if(is_array($permissions) && in_array('Client Feedbacks', $permissions)) checked @endif>
+                			<span class="selectgroup-button">Jobs Management</span>
+                		</label>
                 		<label class="selectgroup-item">
                 			<input type="checkbox" name="permissions[]" value="Event Calendar" class="selectgroup-input" @if(is_array($permissions) && in_array('Event Calendar', $permissions)) checked @endif>
                 			<span class="selectgroup-button">Event Calendar</span>
@@ -86,9 +90,18 @@
                 			<input type="checkbox" name="permissions[]" value="Quote Management" class="selectgroup-input" @if(is_array($permissions) && in_array('Quote Management', $permissions)) checked @endif>
                 			<span class="selectgroup-button">Quote Management</span>
                 		</label>
+						<label class="selectgroup-item">
+                			<input type="checkbox" name="permissions[]" value="Services Management" class="selectgroup-input" @if(is_array($permissions) && in_array('Client Feedbacks', $permissions)) checked @endif>
+                			<span class="selectgroup-button">Services Management</span>
+                		</label>
                 		<label class="selectgroup-item">
                 			<input type="checkbox" name="permissions[]" value="Shop Management" class="selectgroup-input" @if(is_array($permissions) && in_array('Shop Management', $permissions)) checked @endif>
                 			<span class="selectgroup-button">Shop Management</span>
+                		</label>
+						
+						<label class="selectgroup-item">
+                			<input type="checkbox" name="permissions[]" value="Products Management" class="selectgroup-input" @if(is_array($permissions) && in_array('Client Feedbacks', $permissions)) checked @endif>
+                			<span class="selectgroup-button">Products Management</span>
                 		</label>
                 		<label class="selectgroup-item">
                 			<input type="checkbox" name="permissions[]" value="Course Management" class="selectgroup-input" @if(is_array($permissions) && in_array('Course Management', $permissions)) checked @endif>
@@ -135,6 +148,7 @@
                 			<input type="checkbox" name="permissions[]" value="Client Feedbacks" class="selectgroup-input" @if(is_array($permissions) && in_array('Client Feedbacks', $permissions)) checked @endif>
                 			<span class="selectgroup-button">Client Feedbacks</span>
                 		</label>
+					
                 	</div>
                 </div>
               </form>

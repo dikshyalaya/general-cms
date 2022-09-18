@@ -3,8 +3,8 @@
 @php
 $admin = Auth::guard('admin')->user();
 if (!empty($admin->role)) {
-    $permissions = $admin->role->permissions;
-    $permissions = json_decode($permissions, true);
+$permissions = $admin->role->permissions;
+$permissions = json_decode($permissions, true);
 }
 @endphp
 <div class="mt-2 mb-4">
@@ -347,7 +347,7 @@ if (!empty($admin->role)) {
     </div>
     @endif
 
-    @if (empty($admin->role) || (!empty($permissions) && in_array('Content Management', $permissions)))
+    @if (empty($admin->role) || (!empty($permissions) && in_array('Jobs Management', $permissions)))
     <div class="col-sm-6 col-md-3">
         <a href="{{route('admin.job.index', ['language' => $default->code])}}" class="d-block">
             <div class="card card-stats card-primary card-round">
@@ -485,28 +485,31 @@ if (!empty($admin->role)) {
             </div>
         </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card card-stats card-secondary card-round">
-            <div class="card-body ">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="icon-big text-center">
-                            <i class="far fa-users-cog"></i>
+        @if (empty($admin->role) || in_array('Services Management', $permissions)))
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-stats card-secondary card-round">
+                <div class="card-body ">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="icon-big text-center">
+                                <i class="far fa-users-cog"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-9 col-stats">
-                        <div class="numbers">
-                            <p class="card-category">Services</p>
-                            <h4 class="card-title">{{$default->services()->count()}}</h4>
+                        <div class="col-9 col-stats">
+                            <div class="numbers">
+                                <p class="card-category">Services</p>
+                                <h4 class="card-title">{{$default->services()->count()}}</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        @endif
     @endif
 </div>
 <div class="row">
+@if (empty($admin->role) || (!empty($permissions) && in_array('Quote Management', $permissions)))
     <div class="col-lg-6">
         <div class="row row-card-no-pd">
             <div class="col-md-12">
@@ -550,10 +553,10 @@ if (!empty($admin->role)) {
                                                         @csrf
                                                         <input type="hidden" name="quote_id" value="{{$quote->id}}">
                                                         <button type="submit" class="btn btn-danger btn-sm deletebtn">
-                                                        <span class="btn-label">
-                                                        <i class="fas fa-trash"></i>
-                                                        </span>
-                                                        Delete
+                                                            <span class="btn-label">
+                                                                <i class="fas fa-trash"></i>
+                                                            </span>
+                                                            Delete
                                                         </button>
                                                     </form>
                                                 </td>
@@ -571,6 +574,8 @@ if (!empty($admin->role)) {
             </div>
         </div>
     </div>
+@endif
+@if (empty($admin->role) || (!empty($permissions) && in_array('Product Management', $permissions)))
     <div class="col-lg-6">
         <div class="row row-card-no-pd">
             <div class="col-md-12">
@@ -604,7 +609,7 @@ if (!empty($admin->role)) {
                                                 <td>
                                                     <div class="dropdown">
                                                         <button class="btn btn-info btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Actions
+                                                            Actions
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                             <a class="dropdown-item" href="{{route('admin.product.details', $porder->id)}}" target="_blank">Details</a>
@@ -613,7 +618,7 @@ if (!empty($admin->role)) {
                                                                 @csrf
                                                                 <input type="hidden" name="order_id" value="{{$porder->id}}">
                                                                 <button type="submit" class="deletebtn">
-                                                                Delete
+                                                                    Delete
                                                                 </button>
                                                             </form>
                                                         </div>
@@ -632,6 +637,7 @@ if (!empty($admin->role)) {
         </div>
     </div>
 </div>
+@endif
 <!-- Send Mail Modal -->
 <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -639,7 +645,7 @@ if (!empty($admin->role)) {
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Send Mail</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
