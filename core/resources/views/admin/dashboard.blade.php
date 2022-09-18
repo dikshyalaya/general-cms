@@ -485,31 +485,31 @@ $permissions = json_decode($permissions, true);
             </div>
         </div>
     </div>
-        @if (empty($admin->role) || in_array('Services Management', $permissions)))
-        <div class="col-sm-6 col-md-3">
-            <div class="card card-stats card-secondary card-round">
-                <div class="card-body ">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="icon-big text-center">
-                                <i class="far fa-users-cog"></i>
-                            </div>
+    @if (empty($admin->role) || in_array('Services Management', $permissions)))
+    <div class="col-sm-6 col-md-3">
+        <div class="card card-stats card-secondary card-round">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="icon-big text-center">
+                            <i class="far fa-users-cog"></i>
                         </div>
-                        <div class="col-9 col-stats">
-                            <div class="numbers">
-                                <p class="card-category">Services</p>
-                                <h4 class="card-title">{{$default->services()->count()}}</h4>
-                            </div>
+                    </div>
+                    <div class="col-9 col-stats">
+                        <div class="numbers">
+                            <p class="card-category">Services</p>
+                            <h4 class="card-title">{{$default->services()->count()}}</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        @endif
+    </div>
+    @endif
     @endif
 </div>
 <div class="row">
-@if (empty($admin->role) || (!empty($permissions) && in_array('Quote Management', $permissions)))
+    @if (empty($admin->role) || (!empty($permissions) && in_array('Quote Management', $permissions)))
     <div class="col-lg-6">
         <div class="row row-card-no-pd">
             <div class="col-md-12">
@@ -574,8 +574,8 @@ $permissions = json_decode($permissions, true);
             </div>
         </div>
     </div>
-@endif
-@if (empty($admin->role) || (!empty($permissions) && in_array('Product Management', $permissions)))
+    @endif
+    @if (empty($admin->role) || (!empty($permissions) && in_array('Product Management', $permissions)))
     <div class="col-lg-6">
         <div class="row row-card-no-pd">
             <div class="col-md-12">
