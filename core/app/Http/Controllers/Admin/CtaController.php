@@ -28,9 +28,9 @@ class CtaController extends Controller
         $extBackground = pathinfo($background, PATHINFO_EXTENSION);
 
         $rules = [
-            'cta_section_text' => 'required|max:80',
-            'cta_section_button_text' => 'required|max:15',
-            'cta_section_button_url' => 'required|max:255',
+            'cta_section_text' => 'required|max:255',
+            'cta_section_button_text' => 'required|max:255',
+            'cta_section_button_url' => 'required|max:2555',
         ];
 
         if ($request->filled('background')) {

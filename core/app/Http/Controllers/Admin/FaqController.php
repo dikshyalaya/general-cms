@@ -61,7 +61,7 @@ class FaqController extends Controller
 
     $rules = [
       'language_id' => 'required',
-      'question' => 'required|max:255',
+      'question' => 'required|max:2555',
       'answer' => 'required',
       'serial_number' => 'required|integer'
     ];
@@ -100,7 +100,7 @@ class FaqController extends Controller
     }
 
     $rules = [
-      'question' => 'required|max:255',
+      'question' => 'required|max:2555',
       'answer' => 'required',
       'serial_number' => 'required|integer'
     ];

@@ -34,10 +34,10 @@ class UserController extends Controller
 
         $rules = [
             'image' => 'required',
-            'username' => 'required|max:255|unique:admins',
-            'email' => 'required|email|max:255|unique:admins',
-            'first_name' => 'required|max:255',
-            'last_name' => 'required|max:255',
+            'username' => 'required|max:2555|unique:admins',
+            'email' => 'required|email|max:2555|unique:admins',
+            'first_name' => 'required|max:2555',
+            'last_name' => 'required|max:2555',
             'password' => 'required|confirmed',
             'role' => 'required',
         ];
@@ -97,8 +97,8 @@ class UserController extends Controller
                 'max:255',
                 Rule::unique('admins')->ignore($user->id),
             ],
-            'first_name' => 'required|max:255',
-            'last_name' => 'required|max:255',
+            'first_name' => 'required|max:2555',
+            'last_name' => 'required|max:2555',
             'role' => 'required',
         ];
 

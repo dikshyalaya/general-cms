@@ -121,7 +121,7 @@ class HerosectionController extends Controller
     public function videoupdate(Request $request, $langid)
     {
         $rules = [
-            'video_link' => 'required|max:255',
+            'video_link' => 'required|max:2555',
         ];
 
         $validator = Validator::make($request->all(), $rules);

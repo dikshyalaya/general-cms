@@ -24,14 +24,14 @@ class ContactController extends Controller
     public function update(Request $request, $langid)
     {
         $request->validate([
-            'contact_form_title' => 'required|max:255',
-            'contact_form_subtitle' => 'required|max:255',
+            'contact_form_title' => 'required|max:2555',
+            'contact_form_subtitle' => 'required|max:2555',
             'contact_addresses' => 'required',
             'contact_numbers' => 'required',
             'contact_mails' => 'required',
-            'latitude' => 'nullable|max:255',
-            'longitude' => 'nullable|max:255',
-            'map_zoom' => 'nullable|max:255',
+            'latitude' => 'nullable|max:2555',
+            'longitude' => 'nullable|max:2555',
+            'map_zoom' => 'nullable|max:2555',
         ]);
 
         $bs = BasicSetting::where('language_id', $langid)->firstOrFail();

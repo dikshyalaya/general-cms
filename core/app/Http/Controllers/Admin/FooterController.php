@@ -29,7 +29,7 @@ class FooterController extends Controller
 
         $rules = [
             'footer_text' => 'required',
-            'newsletter_text' => 'required|max:255',
+            'newsletter_text' => 'required|max:2555',
             'copyright_text' => 'required',
         ];
 

@@ -48,7 +48,7 @@ class SliderController extends Controller
             'text_font_size' => 'required|integer|digits_between:1,3',
             'button_text' => 'nullable',
             'button_text_font_size' => 'required|integer|digits_between:1,3',
-            'button_url' => 'nullable|max:255',
+            'button_url' => 'nullable|max:2555',
             'serial_number' => 'required|integer',
         ];
 
@@ -134,7 +134,7 @@ class SliderController extends Controller
             'text_font_size' => 'required|integer|digits_between:1,3',
             'button_text' => 'nullable',
             'button_text_font_size' => 'required|integer|digits_between:1,3',
-            'button_url' => 'nullable|max:255',
+            'button_url' => 'nullable|max:2555',
             'serial_number' => 'required|integer',
         ];
 

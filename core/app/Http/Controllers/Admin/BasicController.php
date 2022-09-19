@@ -732,7 +732,7 @@ class BasicController extends Controller
         $request->validate([
             'cookie_alert_status' => 'required',
             'cookie_alert_text' => 'required',
-            'cookie_alert_button_text' => 'required|max:25',
+            'cookie_alert_button_text' => 'required|max:255',
         ]);
 
         $be = BasicExtended::where('language_id', $langid)->firstOrFail();

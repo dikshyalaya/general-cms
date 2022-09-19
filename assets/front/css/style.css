@@ -552,8 +552,7 @@ ul.language-dropdown li:last-child a {
 .sticky-navbar .support-bar-area {
     display: none;
 }
-.sticky-navbar .header-navbar {
-    border: none;
+.sticky-navbar .header-navbar {    
     padding: 15px 0;
 }
 .sticky-navbar .main-menu {

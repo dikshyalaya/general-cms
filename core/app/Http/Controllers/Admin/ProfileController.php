@@ -63,9 +63,9 @@ class ProfileController extends Controller
             'max:255',
             Rule::unique('admins')->ignore($admin->id)
         ],
-        'email' => 'required|email|max:255',
-        'first_name' => 'required|max:255',
-        'last_name' => 'required|max:255',
+        'email' => 'required|email|max:2555',
+        'first_name' => 'required|max:2555',
+        'last_name' => 'required|max:2555',
       ]);
 
 
