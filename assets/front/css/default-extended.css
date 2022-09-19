@@ -36,3 +36,27 @@
     font-size: 14px;
     background-color: #0c4872;
 }
+
+.hero-txt {
+    padding: 80px;
+    color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+.service-categories {
+    padding-top: 30px;
+}
+.approach-section {
+    padding: 30px 0;
+}
+
+.service-categories .single-category {
+    box-shadow: 0 0 5px #0000001a;
+    border-radius: 8px;
+    text-align: center;
+    padding: 40px 30px;
+    margin: 20px auto;
+    transform: translateY(0);
+    transition: 0.3s;
+}
