@@ -2,7 +2,12 @@
 node_modules/
 npm-debug.log
 yarn-error.log
-/assets/
+
+
+/assets/front/
+/assets/lfm/files/
+/assets/user/
+
 
 # Laravel 4 specific
 bootstrap/compiled.php
