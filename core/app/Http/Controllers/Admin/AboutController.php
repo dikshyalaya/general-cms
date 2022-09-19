@@ -44,9 +44,9 @@ class AboutController extends Controller
 
     public function update(Request $request) {
       $rules = [
-        'title' => 'required|max:255',
+        'title' => 'required|max:2555',
         'information' => 'required',
-        'url' => 'required|max:255',
+        'url' => 'required|max:2555',
       ];
 
       $validator = Validator::make($request->all(), $rules);

@@ -17,7 +17,7 @@ class ArchiveController extends Controller
 
     public function store(Request $request) {
       $rules = [
-        'date' => 'required|max:255',
+        'date' => 'required|max:2555',
       ];
 
       $validator = Validator::make($request->all(), $rules);
@@ -36,7 +36,7 @@ class ArchiveController extends Controller
 
     public function update(Request $request) {
       $rules = [
-        'date' => 'required|max:255',
+        'date' => 'required|max:2555',
       ];
 
       $validator = Validator::make($request->all(), $rules);

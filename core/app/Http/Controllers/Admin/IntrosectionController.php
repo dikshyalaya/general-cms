@@ -32,10 +32,10 @@ class IntrosectionController extends Controller
         $extImage2 = pathinfo($image2, PATHINFO_EXTENSION);
 
         $rules = [
-            'intro_section_title' => 'required|max:25',
-            'intro_section_text' => 'required|max:80',
-            'intro_section_button_text' => 'nullable|max:15',
-            'intro_section_button_url' => 'nullable|max:255',
+            'intro_section_title' => 'required|max:255',
+            'intro_section_text' => 'required|max:255',
+            'intro_section_button_text' => 'nullable|max:255',
+            'intro_section_button_url' => 'nullable|max:2555',
             'intro_section_video_link' => 'nullable'
         ];
 

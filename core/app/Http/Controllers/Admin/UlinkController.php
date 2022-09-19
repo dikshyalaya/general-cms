@@ -34,8 +34,8 @@ class UlinkController extends Controller
 
         $rules = [
             'language_id' => 'required',
-            'name' => 'required|max:255',
-            'url' => 'required|max:255'
+            'name' => 'required|max:2555',
+            'url' => 'required|max:2555'
         ];
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -57,8 +57,8 @@ class UlinkController extends Controller
     public function update(Request $request)
     {
         $rules = [
-            'name' => 'required|max:255',
-            'url' => 'required|max:255'
+            'name' => 'required|max:2555',
+            'url' => 'required|max:2555'
         ];
 
         $validator = Validator::make($request->all(), $rules);

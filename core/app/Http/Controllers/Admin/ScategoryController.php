@@ -42,7 +42,7 @@ class ScategoryController extends Controller
         $rules = [
             'language_id' => 'required',
             'image' => 'nullable',
-            'name' => 'required|max:255',
+            'name' => 'required|max:2555',
             'short_text' => 'required',
             'status' => 'required',
             'serial_number' => 'required|integer',
@@ -89,7 +89,7 @@ class ScategoryController extends Controller
         $extImage = pathinfo($image, PATHINFO_EXTENSION);
 
         $rules = [
-            'name' => 'required|max:255',
+            'name' => 'required|max:2555',
             'status' => 'required',
             'short_text' => 'required',
             'serial_number' => 'required|integer',
