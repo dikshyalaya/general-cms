@@ -17,8 +17,7 @@
     background-color: #0F75BC;
 }
 
-.sticky-navbar .header-navbar {
-    border: none;
+.sticky-navbar .header-navbar {   
     padding: 0 30px;
 }
 
@@ -59,4 +58,8 @@
     margin: 20px auto;
     transform: translateY(0);
     transition: 0.3s;
+}
+
+.main-menu{
+    padding: 6px 0;
 }
