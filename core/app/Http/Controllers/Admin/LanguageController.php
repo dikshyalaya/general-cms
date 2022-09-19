@@ -32,7 +32,7 @@ class LanguageController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name' => 'required|max:255',
+            'name' => 'required|max:2555',
             'code' => [
                 'required',
                 'max:255',
@@ -318,7 +318,7 @@ class LanguageController extends Controller
         $language = Language::findOrFail($request->language_id);
 
         $rules = [
-            'name' => 'required|max:255',
+            'name' => 'required|max:2555',
             'code' => [
                 'required',
                 'max:255',

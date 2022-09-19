@@ -19,7 +19,7 @@ class RoleController extends Controller
     public function store(Request $request) {
 
       $rules = [
-        'name' => 'required|max:255',
+        'name' => 'required|max:2555',
       ];
 
       $validator = Validator::make($request->all(), $rules);
@@ -38,7 +38,7 @@ class RoleController extends Controller
 
     public function update(Request $request) {
       $rules = [
-        'name' => 'required|max:255',
+        'name' => 'required|max:2555',
       ];
 
       $validator = Validator::make($request->all(), $rules);

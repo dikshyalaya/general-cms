@@ -42,7 +42,7 @@ class PartnerController extends Controller
         $rules = [
             'language_id' => 'required',
             'image' => 'required',
-            'url' => 'required|max:255',
+            'url' => 'required|max:2555',
             'serial_number' => 'required|integer',
         ];
 
@@ -86,7 +86,7 @@ class PartnerController extends Controller
         $extImage = pathinfo($image, PATHINFO_EXTENSION);
 
         $rules = [
-            'url' => 'required|max:255',
+            'url' => 'required|max:2555',
             'serial_number' => 'required|integer',
         ];
 

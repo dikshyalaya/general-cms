@@ -156,8 +156,8 @@ class MemberController extends Controller
         }
 
         $rules = [
-            'team_section_title' => 'required|max:25',
-            'team_section_subtitle' => 'required|max:80',
+            'team_section_title' => 'required|max:255',
+            'team_section_subtitle' => 'required|max:255',
         ];
 
         if (($version == 'default' || $version == 'dark') && $request->filled('background')) {

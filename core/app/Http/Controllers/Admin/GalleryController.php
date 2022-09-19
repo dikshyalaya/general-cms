@@ -71,7 +71,7 @@ class GalleryController extends Controller
     $rules = [
       'language_id' => 'required',
       'image' => 'required',
-      'title' => 'required|max:255',
+      'title' => 'required|max:2555',
       'serial_number' => 'required|integer',
     ];
 
@@ -131,7 +131,7 @@ class GalleryController extends Controller
     $extImage = pathinfo($image, PATHINFO_EXTENSION);
 
     $rules = [
-      'title' => 'required|max:255',
+      'title' => 'required|max:2555',
       'serial_number' => 'required|integer',
     ];
 
