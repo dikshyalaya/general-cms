@@ -18,7 +18,7 @@
 
 
                  @if (strpos($link["type"], '-megamenu') !==  false)
-                    @includeIf('front.default.partials.mega-menu')
+                    @includeIf('front.light.partials.mega-menu')
 
                  {{-- if the link is not services OR theme version doesn't have service category --}}
                  @else

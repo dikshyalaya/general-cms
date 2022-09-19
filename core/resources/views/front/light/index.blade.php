@@ -1,4 +1,4 @@
-@extends('front.default.layout')
+@extends('front.light.layout')
 
 @section('meta-keywords', "$be->home_meta_keywords")
 @section('meta-description', "$be->home_meta_description")
@@ -57,17 +57,17 @@
 @section('content')
   <!--   hero area start   -->
   @if ($bs->home_version == 'static')
-    @includeif('front.default.partials.static')
+    @includeif('front.light.partials.static')
   @elseif ($bs->home_version == 'slider')
-    @includeif('front.default.partials.slider')
+    @includeif('front.light.partials.slider')
   @elseif ($bs->home_version == 'video')
-    @includeif('front.default.partials.video')
+    @includeif('front.light.partials.video')
   @elseif ($bs->home_version == 'particles')
-    @includeif('front.default.partials.particles')
+    @includeif('front.light.partials.particles')
   @elseif ($bs->home_version == 'water')
-    @includeif('front.default.partials.water')
+    @includeif('front.light.partials.water')
   @elseif ($bs->home_version == 'parallax')
-    @includeif('front.default.partials.parallax')
+    @includeif('front.light.partials.parallax')
   @endif
   <!--   hero area end    -->
 

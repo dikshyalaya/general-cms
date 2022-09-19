@@ -159,7 +159,13 @@ class FrontendController extends Controller
             } else {
                 return view('front.ecommerce.index1', $data);
             }
-        } elseif ($version == 'default' || $version == 'dark') {
+        } elseif ($version == 'light') {
+            if ($bex->home_page_pagebuilder == 1) {
+                return view('front.light.index', $data);
+            } else {
+                return view('front.light.index1', $data);
+            }
+        }elseif ($version == 'default' || $version == 'dark') {
             if ($bex->home_page_pagebuilder == 1) {
                 return view('front.default.index', $data);
             } else {

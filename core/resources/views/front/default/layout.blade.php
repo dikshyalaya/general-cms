@@ -63,6 +63,10 @@
         <link href="{{url('/')}}/assets/front/css/dark-base-color.php?color={{$bs->base_color}}" rel="stylesheet">
       @endif
 
+      @if ($be->theme_version == 'default')
+      <link rel="stylesheet" href="{{asset('assets/front/css/default-extended.css')}}">
+      @endif
+
       @if ($rtl == 1)
       <!-- RTL css -->
       <link rel="stylesheet" href="{{asset('assets/front/css/rtl.css')}}">
@@ -96,7 +100,7 @@
 
       <!--   header area start   -->
       <div class="header-area header-absolute @yield('no-breadcrumb')">
-         <div class="container">
+         <div class="container-topbar">
             <div class="support-bar-area">
                <div class="row">
                   <div class="col-lg-6 support-contact-info">
@@ -212,27 +216,7 @@
       <!--   header area end   -->
 
 
-      @if (!request()->routeIs('front.index') && !request()->routeIs('front.packageorder.confirmation'))
-        <!--   breadcrumb area start   -->
-        <div class="breadcrumb-area cases lazy" data-bg="{{asset('assets/front/img/' . $bs->breadcrumb)}}" style="background-size:cover;">
-            <div class="container">
-            <div class="breadcrumb-txt">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-8 col-sm-10">
-                        <span>@yield('breadcrumb-title')</span>
-                        <h1>@yield('breadcrumb-subtitle')</h1>
-                        <ul class="breadcumb">
-                        <li><a href="{{route('front.index')}}">{{__('Home')}}</a></li>
-                        <li>@yield('breadcrumb-link')</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="breadcrumb-area-overlay" style="background-color: #{{$be->breadcrumb_overlay_color}};opacity: {{$be->breadcrumb_overlay_opacity}};"></div>
-        </div>
-        <!--   breadcrumb area end    -->
-      @endif
+      
 
 
       @yield('content')
@@ -240,7 +224,7 @@
 
       <!--    footer section start   -->
       <footer class="footer-section">
-         <div class="container">
+         <div class="container-bottom">
             @if (!($bex->home_page_pagebuilder == 0 && $bs->top_footer_section == 0))
             <div class="top-footer-section">
                <div class="row">

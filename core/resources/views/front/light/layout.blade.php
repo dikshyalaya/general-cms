@@ -23,15 +23,9 @@
       <!-- plugin css -->
       <link rel="stylesheet" href="{{asset('assets/front/css/plugin.min.css')}}">
 
-      
-      <!-- main css -->
-      <link rel="stylesheet" href="{{asset('assets/front/css/light-style.css')}}">
+     
       <!-- common css -->
       <link rel="stylesheet" href="{{asset('assets/front/css/common-style.css')}}">
-      <!-- responsive css -->
-      <link rel="stylesheet" href="{{asset('assets/front/css/responsive.css')}}">
-     
-
       @yield('styles')
 
       @if ($bs->is_tawkto == 1 || $bex->is_whatsapp == 1)
@@ -57,14 +51,12 @@
       <link rel="stylesheet" href="{{asset('assets/front/css/responsive.css')}}">
       <!-- common base color change -->
       <link href="{{url('/')}}/assets/front/css/common-base-color.php?color={{$bs->base_color}}" rel="stylesheet">
-      <!-- base color change -->
-      <link href="{{url('/')}}/assets/front/css/base-color.php?color={{$bs->base_color}}{{$be->theme_version != 'dark' ? "&color1=" . $bs->secondary_base_color : ""}}" rel="stylesheet">
-
-      @if ($be->theme_version == 'dark')
-        <!-- dark version css -->
-        <link rel="stylesheet" href="{{asset('assets/front/css/dark.css')}}">
-        <!-- dark version base color change -->
-        <link href="{{url('/')}}/assets/front/css/dark-base-color.php?color={{$bs->base_color}}" rel="stylesheet">
+      
+      @if ($be->theme_version == 'light')
+        <!-- light version css -->
+        <link rel="stylesheet" href="{{asset('assets/front/css/light-style.css')}}">
+        <!-- light version base color change -->
+        <link href="{{url('/')}}/assets/front/css/light-base-color.php?color={{$bs->base_color}}" rel="stylesheet">
       @endif
 
       @if ($rtl == 1)
@@ -100,7 +92,7 @@
 
       <!--   header area start   -->
       <div class="header-area header-absolute @yield('no-breadcrumb')">
-         <div class="container">
+         <div class="container-light">
             <div class="support-bar-area">
                <div class="row">
                   <div class="col-lg-6 support-contact-info">
@@ -209,7 +201,7 @@
             </div>
 
 
-            @includeIf('front.default.partials.navbar')
+            @includeIf('front.light.partials.navbar')
 
          </div>
       </div>
