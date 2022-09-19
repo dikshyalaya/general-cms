@@ -1,0 +1,38 @@
+.container-topbar{
+    padding: 0;
+    width:100%;
+}
+
+.support-bar-area {
+   padding:0 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0c4872;
+}
+
+.header-navbar {
+    padding: 0 30px;
+    border-bottom: 1px solid #94a7b2;
+    position: relative;
+    background-color: #0F75BC;
+}
+
+.sticky-navbar .header-navbar {
+    border: none;
+    padding: 0 30px;
+}
+
+.pagebuilder-content{
+    margin-top:100px
+}
+
+.top-footer-section {
+    padding: 30px;
+    border-bottom: 1px solid #fff;
+}
+
+.copyright-section {
+    padding: 10px 30px;
+    font-size: 14px;
+    background-color: #0c4872;
+}
