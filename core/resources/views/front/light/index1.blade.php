@@ -150,7 +150,7 @@
                                           {{$scategory->short_text}}
                                        @endif
                                     </p>
-                                    <a href="{{route('front.services', ['category'=>$scategory->id])}}" class="readmore">{{__('View Services')}}</a>
+                                    <a href="{{route('front.services', ['category'=>$scategory->id])}}" class="readmore">{{__('View More')}}</a>
                                 </div>
                             </div>
                         </div>
