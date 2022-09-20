@@ -25,7 +25,7 @@ class CalendarController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'title' => 'required|max:255',
+            'title' => 'required|max:2555',
             'start_date' => 'required',
             'end_date' => 'required',
         ];
@@ -56,7 +56,7 @@ class CalendarController extends Controller
         ];
 
         $rules = [
-            'title' => 'required|max:255',
+            'title' => 'required|max:2555',
             'start_date' => 'required',
             'end_date' => 'required',
         ];

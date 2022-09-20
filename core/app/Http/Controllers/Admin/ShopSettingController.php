@@ -28,7 +28,7 @@ class ShopSettingController extends Controller
     $rules = [
         'language_id' => 'required',
         'title' => 'required',
-        'text' => 'required|max:255',
+        'text' => 'required|max:2555',
         'charge' => 'required',
     ];
 
@@ -57,7 +57,7 @@ class ShopSettingController extends Controller
    {
     $rules = [
         'title' => 'required',
-        'text' => 'required|max:255',
+        'text' => 'required|max:2555',
         'charge' => 'required',
     ];
 

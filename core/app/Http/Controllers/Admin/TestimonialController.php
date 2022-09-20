@@ -133,8 +133,8 @@ class TestimonialController extends Controller
     public function textupdate(Request $request, $langid)
     {
         $request->validate([
-            'testimonial_section_title' => 'required|max:25',
-            'testimonial_section_subtitle' => 'required|max:80',
+            'testimonial_section_title' => 'required|max:255',
+            'testimonial_section_subtitle' => 'required|max:255',
         ]);
 
         $bs = BS::where('language_id', $langid)->firstOrFail();

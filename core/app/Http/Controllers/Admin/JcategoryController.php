@@ -32,7 +32,7 @@ class JcategoryController extends Controller
 
         $rules = [
             'language_id' => 'required',
-            'name' => 'required|max:255',
+            'name' => 'required|max:2555',
             'status' => 'required',
             'serial_number' => 'required|integer',
         ];
@@ -56,7 +56,7 @@ class JcategoryController extends Controller
 
     public function update(Request $request) {
         $rules = [
-            'name' => 'required|max:255',
+            'name' => 'required|max:2555',
             'status' => 'required',
             'serial_number' => 'required|integer',
         ];
