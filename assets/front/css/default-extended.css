@@ -67,3 +67,13 @@
 .section-summary {
     margin: 15px 0;
 }
+
+.service-categories .single-category {
+    box-shadow: 0 0 5px #0000007a;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    transform: translateY(0);
+    transition: 0.3s;
+}
