@@ -82,7 +82,7 @@
         <section class="services-area pb-130">
             <div class="container">
                 <div class="row text-center">
-                <div class="col-lg-6 offset-lg-3">
+                <div class="col-lg-12">
                     <span class="section-title">{{convertUtf8($bs->service_section_title)}}</span>
                     <h2 class="section-summary">{{convertUtf8($bs->service_section_subtitle)}}</h2>
                 </div>
