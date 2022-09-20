@@ -82,7 +82,7 @@
         <section class="services-area pb-130">
             <div class="container">
                 <div class="row text-center">
-                <div class="col-lg-6 offset-lg-3">
+                <div class="col-md-12">
                     <span class="section-title">{{convertUtf8($bs->service_section_title)}}</span>
                     <h2 class="section-summary">{{convertUtf8($bs->service_section_subtitle)}}</h2>
                 </div>
@@ -124,7 +124,7 @@
         <div class="service-categories">
             <div class="container">
             <div class="row text-center">
-                <div class="col-lg-6 offset-lg-3">
+                <div class="col-lg-12">
                     <span class="section-title">{{convertUtf8($bs->service_section_title)}}</span>
                     <h2 class="section-summary">{{convertUtf8($bs->service_section_subtitle)}}</h2>
                 </div>
@@ -145,12 +145,12 @@
                                     <p>
                                        @if (strlen($scategory->short_text) > 112)
                                           {{mb_substr($scategory->short_text, 0, 112, 'utf-8')}}<span style="display: none;">{{mb_substr($scategory->short_text, 112,null, 'utf-8')}}</span>
-                                          <a href="#" class="see-more">{{__('see more')}}...</a>
+                                          <a href="#" class="see-more">{{__('more')}}...</a>
                                        @else
                                           {{$scategory->short_text}}
                                        @endif
                                     </p>
-                                    <a href="{{route('front.services', ['category'=>$scategory->id])}}" class="readmore">{{__('View Services')}}</a>
+                                    <a href="{{route('front.services', ['category'=>$scategory->id])}}" class="readmore">{{__('Read more')}}</a>
                                 </div>
                             </div>
                         </div>
